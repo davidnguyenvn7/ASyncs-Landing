@@ -1,0 +1,23 @@
+# Postgres riêng cho ASync (dev). Cổng 5434 để tránh đụng các container Postgres
+# khác đang chạy (5432/5433). Production: dùng Postgres trên VPS qua DATABASE_URL.
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: async_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: async
+      POSTGRES_PASSWORD: async_dev_2026
+      POSTGRES_DB: async
+    ports:
+      - "5434:5432"
+    volumes:
+      - async_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U async -d async"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  async_pgdata:
