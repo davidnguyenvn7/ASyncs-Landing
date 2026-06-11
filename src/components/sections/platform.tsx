@@ -104,7 +104,7 @@ export function Platform() {
       <div className="wrap">
         <div className="platform-head">
           <span className="eyebrow center reveal">Giá trị cốt lõi</span>
-          <h2 className="h-section reveal d1">
+          <h2 className="h-section values-title reveal d1">
             <span className="grad">ASync</span> được xây dựng trên ba nguyên tắc xuyên suốt
             <br />
             áp dụng cho mọi sản phẩm, mọi mô hình doanh nghiệp

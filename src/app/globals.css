@@ -1239,6 +1239,9 @@ h3 {
 .platform-head .lead {
   text-align: center;
 }
+.values-title {
+  font-size: clamp(24px, 3.2vw, 38px);
+}
 .values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
