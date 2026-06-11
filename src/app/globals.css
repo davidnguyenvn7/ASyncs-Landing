@@ -999,6 +999,18 @@ h3 {
 .has-mega {
   position: relative;
 }
+/* Invisible hover bridge: the panel is `position: fixed` a few pixels below the
+   trigger, so without this the pointer crosses a dead gap on its way down and
+   mouseleave closes the menu. Only active while open so it never blocks other
+   hovers. */
+.has-mega.open::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  right: -16px;
+  height: 28px;
+}
 .nav-links .mega-trigger {
   display: inline-flex;
   align-items: center;
@@ -1047,7 +1059,10 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-.mega-suite {
+/* Scoped under .nav-links so these win over the pill-shaped `.nav-links a`
+   rule (higher specificity); otherwise the suite cards inherit a 999px radius
+   whose rounded sides curve into the card text. */
+.nav-links a.mega-suite {
   display: block;
   padding: 16px;
   border-radius: var(--r-md);
@@ -1055,7 +1070,7 @@ h3 {
   transition: background 0.18s, border-color 0.18s;
   text-align: left;
 }
-.mega-suite:hover {
+.nav-links a.mega-suite:hover {
   background: rgba(255, 255, 255, 0.035);
   border-color: var(--line-lime);
 }
