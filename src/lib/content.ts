@@ -38,7 +38,7 @@ export type Suite = {
   icon: string;
   label: string;
   title: string;
-  desc: string;
+  desc?: string;
   bullets: string[];
   apps: { icon: string; name: string }[];
   flip?: boolean;
@@ -52,9 +52,8 @@ export const suites: Suite[] = [
   {
     id: "core",
     icon: "🗂️",
-    label: "ASync CORE+",
-    title: "Vận hành & quy trình, gọn trong một hệ thống",
-    desc: "Công việc, quy trình, phê duyệt và dự án được đồng bộ thời gian thực — không còn Excel rời rạc, không còn phê duyệt qua tin nhắn.",
+    label: "ASyncs CORE+",
+    title: "Vận hành & quy trình,\ngọn trong một hệ thống",
     bullets: [
       "Giao việc & theo dõi tiến độ tập trung",
       "Quy trình & phê duyệt tự động theo kịch bản",
@@ -66,7 +65,7 @@ export const suites: Suite[] = [
       { icon: "📝", name: "Phê duyệt" },
       { icon: "📁", name: "Dự án" },
     ],
-    barLabel: "async core · công việc",
+    barLabel: "asyncs core · công việc",
     visual: {
       kind: "rows",
       rows: [
@@ -79,8 +78,8 @@ export const suites: Suite[] = [
   {
     id: "finance",
     icon: "💳",
-    label: "ASync FINANCE+",
-    title: "Kiểm soát tài chính, không thất thoát dòng tiền",
+    label: "ASyncs FINANCE+",
+    title: "Kiểm soát tài chính,\nkhông thất thoát dòng tiền",
     desc: "Thu chi, công nợ, hoá đơn và doanh thu hiển thị tức thì. Tự động nhắc công nợ và thu qua QR — giảm tới 70% thao tác thủ công.",
     bullets: [
       "Quản lý thu chi & công nợ theo thời gian thực",
@@ -94,7 +93,7 @@ export const suites: Suite[] = [
       { icon: "🔳", name: "QR thanh toán" },
     ],
     flip: true,
-    barLabel: "async finance · dòng tiền",
+    barLabel: "asyncs finance · dòng tiền",
     visual: {
       kind: "finance",
       kpis: [
@@ -108,9 +107,9 @@ export const suites: Suite[] = [
   {
     id: "people",
     icon: "👥",
-    label: "ASync PEOPLE+",
+    label: "ASyncs PEOPLE+",
     title: "Quản trị nhân sự minh bạch theo dữ liệu",
-    desc: "Chấm công, ngày công, KPI và tính lương dựa trên dữ liệu thực tế — công bằng cho nhân viên, rõ ràng cho nhà quản lý.",
+    desc: "Chấm công, ngày công, KPI và tính lương\ndựa trên dữ liệu thực tế —\ncông bằng cho nhân viên, rõ ràng cho nhà quản lý.",
     bullets: [
       "Hồ sơ nhân sự & chấm công tập trung",
       "KPI & đánh giá hiệu suất theo phòng ban",
@@ -122,7 +121,7 @@ export const suites: Suite[] = [
       { icon: "💵", name: "Tính lương" },
       { icon: "📈", name: "KPI" },
     ],
-    barLabel: "async people · nhân sự",
+    barLabel: "asyncs people · nhân sự",
     visual: {
       kind: "rows",
       rows: [
@@ -135,9 +134,9 @@ export const suites: Suite[] = [
   {
     id: "crm",
     icon: "🎯",
-    label: "ASync CRM+",
+    label: "ASyncs CRM+",
     title: "Bán hàng có quy trình, không rơi rớt cơ hội",
-    desc: "Mọi lead từ quảng cáo, giới thiệu hay hotline đổ về một pipeline. Theo dõi chăm sóc, nhắc lịch và đo tỷ lệ chuyển đổi theo từng nguồn.",
+    desc: "Mọi lead từ quảng cáo, giới thiệu hay hotline đổ về một pipeline. Theo dõi chăm sóc, nhắc lịch và đo tỷ lệ chuyển đổi theo từng nguồn.",
     bullets: [
       "Quản lý lead tập trung đa nguồn",
       "Pipeline bán hàng & nhắc chăm sóc tự động",
@@ -150,7 +149,7 @@ export const suites: Suite[] = [
       { icon: "🔁", name: "Chuyển đổi" },
     ],
     flip: true,
-    barLabel: "async crm · pipeline",
+    barLabel: "asyncs crm · pipeline",
     visual: {
       kind: "rows",
       rows: [
@@ -219,7 +218,7 @@ export const industries: Industry[] = [
   {
     tab: "Bán lẻ & Chuỗi",
     title: "Bán lẻ & Chuỗi cửa hàng",
-    desc: "Quản lý đơn hàng, tồn kho và doanh thu đồng bộ giữa nhiều chi nhánh — một bức tranh duy nhất cho toàn chuỗi.",
+    desc: "Quản lý đơn hàng, tồn kho và doanh thu đồng bộ giữa nhiều chi nhánh.",
     points: [
       "Đồng bộ tồn kho & đơn hàng đa chi nhánh",
       "CRM khách hàng thân thiết & khuyến mãi",
@@ -267,7 +266,7 @@ export const industries: Industry[] = [
   {
     tab: "Giáo dục & Đào tạo",
     title: "Giáo dục & Đào tạo",
-    desc: "Quản lý học viên, lớp học, học phí và trải nghiệm học tập — phân hệ chuyên sâu ASync EDU+.",
+    desc: "Quản lý học viên, lớp học, học phí và trải nghiệm học tập — phân hệ chuyên sâu ASyncs EDU+.",
     points: [
       "Học viên, xếp lớp & học phí tập trung",
       "Quiz Engine & gamification cho lớp học",
@@ -316,9 +315,9 @@ export const industries: Industry[] = [
 
 export const journey = [
   { n: "01", title: "Khảo sát", text: "Phân tích quy trình hiện tại và những điểm thất thoát trong vận hành của trung tâm." },
-  { n: "02", title: "Số hoá", text: "Đưa toàn bộ khách hàng, đơn hàng, tài chính và nhân sự lên một hệ thống duy nhất." },
-  { n: "03", title: "Tối ưu hoá", text: "Tự động hoá nhắc công nợ, phê duyệt và quy trình bán hàng theo kịch bản." },
-  { n: "04", title: "Dữ liệu hoá", text: "Ra quyết định bằng dữ liệu thời gian thực và sẵn sàng mở rộng quy mô." },
+  { n: "02", title: "Số hoá", text: "Đưa toàn bộ khách hàng,\nđơn hàng, tài chính và\nnhân sự lên một hệ thống." },
+  { n: "03", title: "Tối ưu hoá", text: "Tự động hoá nhắc công nợ,\nphê duyệt và quy trình\nbán hàng theo kịch bản." },
+  { n: "04", title: "Dữ liệu hoá", text: "Ra quyết định bằng dữ liệu thời gian thực\nvà sẵn sàng mở rộng quy mô." },
 ];
 
 export const testimonials = [
@@ -347,20 +346,20 @@ export const testimonials = [
 
 export const faqs = [
   {
-    q: "ASync phù hợp với doanh nghiệp quy mô nào?",
+    q: "ASyncs phù hợp với doanh nghiệp quy mô nào?",
     a: "Từ hộ kinh doanh, SME đến chuỗi nhiều chi nhánh và doanh nghiệp đa phòng ban. Nền tảng triển khai theo phân hệ, mở rộng dần theo nhu cầu.",
   },
   {
     q: "Mất bao lâu để triển khai và chuyển dữ liệu?",
-    a: "Với gói cơ bản, doanh nghiệp có thể bắt đầu vận hành trong vài ngày. Đội ngũ ASync hỗ trợ nhập dữ liệu khách hàng, đơn hàng và công nợ từ Excel hiện có.",
+    a: "Với gói cơ bản, doanh nghiệp có thể bắt đầu vận hành trong vài ngày. Đội ngũ ASyncs hỗ trợ nhập dữ liệu khách hàng, đơn hàng và công nợ từ Excel hiện có.",
   },
   {
     q: "Có giải pháp riêng cho ngành của tôi không?",
-    a: "Có. ASync cấu hình theo từng ngành — bán lẻ, dịch vụ, sản xuất, y tế, bất động sản… và có các vertical chuyên sâu như ASync EDU+ cho giáo dục.",
+    a: "Có. ASyncs cấu hình theo từng ngành — bán lẻ, dịch vụ, sản xuất, y tế, bất động sản… và có các vertical chuyên sâu như ASyncs EDU+ cho giáo dục.",
   },
   {
-    q: "ASync ERP và các vertical khác nhau thế nào?",
-    a: "ASync ERP là nền tảng lõi đa ngành (công việc, tài chính, nhân sự, CRM). Các vertical như EDU+ bổ sung phân hệ chuyên sâu cho từng ngành trên cùng nền tảng đó.",
+    q: "ASyncs ERP và các vertical khác nhau thế nào?",
+    a: "ASyncs ERP là nền tảng lõi đa ngành (công việc, tài chính, nhân sự, CRM). Các vertical như EDU+ bổ sung phân hệ chuyên sâu cho từng ngành trên cùng nền tảng đó.",
   },
 ];
 
@@ -368,20 +367,20 @@ export const footerColumns = [
   {
     title: "Bộ sản phẩm",
     links: [
-      { label: "ASync CORE+", href: "#platform" },
-      { label: "ASync FINANCE+", href: "#platform" },
-      { label: "ASync PEOPLE+", href: "#platform" },
-      { label: "ASync CRM+", href: "#platform" },
-      { label: "ASync EDU+", href: "#diff" },
-      { label: "ASync INSIGHT+", href: "#dashboard" },
+      { label: "ASyncs CORE+", href: "#platform" },
+      { label: "ASyncs FINANCE+", href: "#platform" },
+      { label: "ASyncs PEOPLE+", href: "#platform" },
+      { label: "ASyncs CRM+", href: "#platform" },
+      { label: "ASyncs EDU+", href: "#diff" },
+      { label: "ASyncs INSIGHT+", href: "#dashboard" },
     ],
   },
   {
     title: "Giải pháp",
     links: [
-      { label: "ASync ERP", href: "#platform" },
-      { label: "ASync CRM", href: "#platform" },
-      { label: "ASync EDU+", href: "#diff" },
+      { label: "ASyncs ERP", href: "#platform" },
+      { label: "ASyncs CRM", href: "#platform" },
+      { label: "ASyncs EDU+", href: "#diff" },
       { label: "Theo lĩnh vực", href: "#industries" },
     ],
   },
@@ -397,20 +396,20 @@ export const footerColumns = [
   {
     title: "Công ty",
     links: [
-      { label: "Về ASync", href: "#top" },
+      { label: "Về ASyncs", href: "#top" },
       { label: "Liên hệ", href: "#cta" },
       { label: "Đặt lịch demo", href: "#cta" },
-      { label: "hello@async.vn", href: "#top" },
+      { label: "asyncs.tech@gmail.com", href: "mailto:asyncs.tech@gmail.com" },
     ],
   },
 ];
 
 export const productOptions = [
-  { value: "erp", label: "ASync ERP (đa lĩnh vực)" },
-  { value: "core", label: "ASync CORE+ — Vận hành" },
-  { value: "finance", label: "ASync FINANCE+ — Tài chính" },
-  { value: "people", label: "ASync PEOPLE+ — Nhân sự" },
-  { value: "crm", label: "ASync CRM+ — Bán hàng" },
-  { value: "edu", label: "ASync EDU+ — Giáo dục" },
-  { value: "insight", label: "ASync INSIGHT+ — Dữ liệu" },
+  { value: "erp", label: "ASyncs ERP (đa lĩnh vực)" },
+  { value: "core", label: "ASyncs CORE+ — Vận hành" },
+  { value: "finance", label: "ASyncs FINANCE+ — Tài chính" },
+  { value: "people", label: "ASyncs PEOPLE+ — Nhân sự" },
+  { value: "crm", label: "ASyncs CRM+ — Bán hàng" },
+  { value: "edu", label: "ASyncs EDU+ — Giáo dục" },
+  { value: "insight", label: "ASyncs INSIGHT+ — Dữ liệu" },
 ] as const;

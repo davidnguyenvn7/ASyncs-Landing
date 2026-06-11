@@ -6,7 +6,7 @@ export function LogoWall() {
   return (
     <section className="logo-wall" data-screen-label="Khách hàng tin dùng">
       <p className="lw-label">
-        <b>500+</b> doanh nghiệp thuộc nhiều lĩnh vực đang đồng bộ vận hành cùng ASync
+        <b>500+</b> doanh nghiệp thuộc nhiều lĩnh vực đang đồng bộ vận hành cùng ASyncs
       </p>
       <div className="logo-mask">
         <div className="logo-row" id="logoRow">

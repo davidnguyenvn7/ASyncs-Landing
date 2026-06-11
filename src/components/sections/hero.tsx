@@ -11,9 +11,11 @@ export function Hero() {
           From chaos to <span className="grad">synchronized systems</span>
         </h1>
         <p className="lead reveal d2">
-          ASync là nền tảng vận hành &amp; tự động hoá toàn diện cho doanh nghiệp — hợp nhất công
-          việc, tài chính, nhân sự, bán hàng và dữ liệu trên một hệ thống duy nhất. Linh hoạt cho
-          mọi lĩnh vực, từ thương mại – dịch vụ – sản xuất đến giáo dục.
+          ASyncs là nền tảng vận hành &amp; tự động hoá toàn diện cho doanh nghiệp —{" "}
+          <br />
+          hợp nhất công việc, tài chính, nhân sự, bán hàng và dữ liệu trên một hệ thống duy nhất.{" "}
+          <br />
+          Linh hoạt cho mọi lĩnh vực, từ thương mại – dịch vụ – sản xuất đến giáo dục.
         </p>
         <div className="hero-actions reveal d3">
           <DemoButton variant="lime">
@@ -27,9 +29,13 @@ export function Hero() {
           <a className="sol-card" href="#platform">
             <span className="sol-name">
               <i />
-              ASync ERP
+              ASyncs ERP
             </span>
-            <p>Vận hành &amp; tự động hoá cho doanh nghiệp đa lĩnh vực.</p>
+            <p>
+              Vận hành &amp; tự động hoá{" "}
+              <br />
+              cho doanh nghiệp đa lĩnh vực.
+            </p>
             <span className="sol-go">
               Xem giải pháp <span className="arr">→</span>
             </span>
@@ -37,9 +43,9 @@ export function Hero() {
           <a className="sol-card alt" href="#diff">
             <span className="sol-name">
               <i />
-              ASync EDU+
+              ASyncs EDU+
             </span>
-            <p>Vertical chuyên sâu cho trung tâm &amp; tổ chức giáo dục.</p>
+            <p>Giải pháp chuyên biệt dành cho trung tâm &amp; tổ chức giáo dục.</p>
             <span className="sol-go">
               Xem giải pháp <span className="arr">→</span>
             </span>

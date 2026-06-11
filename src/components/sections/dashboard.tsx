@@ -53,11 +53,12 @@ export function Dashboard() {
     <section className="section dark" id="dashboard" data-screen-label="Bảng điều hành">
       <div className="wrap">
         <div className="dash-head">
-          <span className="eyebrow center reveal">ASync INSIGHT+ · Bảng điều hành</span>
+          <span className="eyebrow center reveal">ASyncs INSIGHT+ · Bảng điều hành</span>
           <h2 className="h-section reveal d1">Điều hành doanh nghiệp bằng dữ liệu.</h2>
           <p className="lead reveal d2">
-            Mọi chỉ số vận hành hội tụ trên một bảng điều hành — giúp nhà quản lý ra quyết định
-            chính xác ngay khi cần.
+            Mọi chỉ số vận hành hội tụ trên một bảng điều hành —{" "}
+            <br />
+            giúp nhà quản lý ra quyết định chính xác ngay khi cần.
           </p>
         </div>
         <div className="browser reveal d2" id="dashMock">
@@ -68,7 +69,7 @@ export function Dashboard() {
               <i />
               <i />
             </span>
-            <span className="browser-url">async · business dashboard</span>
+            <span className="browser-url">asyncs · business dashboard</span>
           </div>
           <div className="dash-body">
             <div className="kpi-grid">

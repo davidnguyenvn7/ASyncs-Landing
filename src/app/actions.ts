@@ -70,6 +70,6 @@ export async function submitDemoRequest(
 
   return {
     ok: true,
-    message: "Đã nhận yêu cầu! Đội ngũ ASync sẽ liên hệ với bạn trong thời gian sớm nhất.",
+    message: "Đã nhận yêu cầu! Đội ngũ ASyncs sẽ liên hệ với bạn trong thời gian sớm nhất.",
   };
 }

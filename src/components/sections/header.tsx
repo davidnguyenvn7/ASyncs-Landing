@@ -43,9 +43,9 @@ export function Header() {
   return (
     <header className={`site-header${scrolled ? " scrolled" : ""}`} id="header">
       <div className={`wrap nav${navOpen ? " nav-open" : ""}`}>
-        <a className="brand" href="#top" aria-label="ASync" onClick={closeAll}>
+        <a className="brand" href="#top" aria-label="ASyncs" onClick={closeAll}>
           <span className="brand-mark">
-            A<b>Sync</b>
+            A<b>Syncs</b>
           </span>
           <span className="brand-tag">Asynchronized System</span>
         </a>
@@ -79,7 +79,7 @@ export function Header() {
                     <div className="ms-top">
                       <span className="ms-ic">{s.icon}</span>
                       <span className="ms-name">
-                        ASync <b>{s.name}</b>
+                        ASyncs <b>{s.name}</b>
                       </span>
                     </div>
                     <p className="ms-desc">{s.desc}</p>

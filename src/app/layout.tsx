@@ -17,9 +17,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ASync — Nền tảng vận hành & tự động hoá doanh nghiệp đa lĩnh vực",
+  title: "ASyncs — Nền tảng vận hành & tự động hoá doanh nghiệp đa lĩnh vực",
   description:
-    "ASync là nền tảng vận hành & tự động hoá toàn diện cho doanh nghiệp — hợp nhất công việc, tài chính, nhân sự, bán hàng và dữ liệu trên một hệ thống duy nhất.",
+    "ASyncs là nền tảng vận hành & tự động hoá toàn diện cho doanh nghiệp — hợp nhất công việc, tài chính, nhân sự, bán hàng và dữ liệu trên một hệ thống duy nhất.",
 };
 
 export const viewport: Viewport = {

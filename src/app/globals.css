@@ -136,6 +136,22 @@ button {
   padding-block: clamp(72px, 11vw, 150px);
   position: relative;
 }
+/* Thu hẹp khoảng đen giữa khối nền tảng và khối EDU+ */
+#platform {
+  padding-bottom: clamp(16px, 2.5vw, 32px);
+}
+#diff {
+  padding-top: clamp(40px, 6vw, 72px);
+}
+/* Các điểm ngắt dòng cố định chỉ áp dụng trên màn rộng */
+@media (max-width: 720px) {
+  .hero .lead br,
+  .dash-head .lead br,
+  .cta-banner h2 br,
+  .sol-card p br {
+    display: none;
+  }
+}
 
 .eyebrow {
   font-family: var(--font-mono);
@@ -501,6 +517,7 @@ h3 {
 .hero .lead {
   text-align: center;
   margin-inline: auto;
+  max-width: 90ch;
 }
 .hero-actions {
   display: flex;
@@ -595,6 +612,9 @@ h3 {
   .diff-grid {
     grid-template-columns: 1fr;
   }
+}
+#diff .h-section {
+  font-size: clamp(28px, 3.6vw, 46px);
 }
 .diff-tabs {
   display: flex;
@@ -1127,14 +1147,14 @@ h3 {
 
 /* ---------- logo wall ---------- */
 .logo-wall {
-  background: var(--bg-dark-2);
-  border-block: 1px solid var(--line-d);
+  background: #ffffff;
+  border-block: 1px solid var(--line-l);
   padding-block: 40px;
 }
 .logo-wall .lw-label {
   text-align: center;
   font-size: 14px;
-  color: var(--paper-soft);
+  color: var(--ink-soft);
   margin-bottom: 26px;
 }
 .logo-wall .lw-label b {
@@ -1165,11 +1185,11 @@ h3 {
   font-weight: 800;
   font-size: 17px;
   letter-spacing: -0.02em;
-  color: var(--paper-soft);
+  color: var(--ink-soft);
   padding: 12px 22px;
-  border: 1px solid var(--line-d);
+  border: 1px solid var(--line-l);
   border-radius: var(--r-pill);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(12, 14, 10, 0.02);
 }
 .logo-chip i {
   width: 9px;
@@ -1251,12 +1271,14 @@ h3 {
 .suite h3 {
   font-size: clamp(24px, 3vw, 36px);
   margin-bottom: 14px;
+  white-space: pre-line;
 }
 .suite-copy > p {
   color: var(--paper-soft);
   font-size: 16px;
-  max-width: 46ch;
+  max-width: 62ch;
   margin-bottom: 20px;
+  white-space: pre-line;
 }
 .suite-bullets {
   display: flex;
@@ -1612,6 +1634,7 @@ h3 {
 .jstep p {
   font-size: 14px;
   color: var(--paper-soft);
+  white-space: pre-line;
 }
 
 /* ---------- testimonials ---------- */
@@ -1801,7 +1824,7 @@ h3 {
 }
 .cta-banner h2 {
   font-size: clamp(30px, 4.6vw, 56px);
-  max-width: 18ch;
+  max-width: 22ch;
 }
 .cta-banner .lead {
   text-align: center;

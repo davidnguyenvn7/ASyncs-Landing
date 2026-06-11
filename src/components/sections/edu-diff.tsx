@@ -8,20 +8,16 @@ export function EduDiff() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="section dark" id="diff" data-screen-label="ASync EDU+">
+    <section className="section dark" id="diff" data-screen-label="ASyncs EDU+">
       <div className="wrap">
         <div className="diff-grid">
           <div>
-            <span className="eyebrow reveal">ASync EDU+ · Vertical cho giáo dục</span>
+            <span className="eyebrow reveal">ASyncs EDU+</span>
             <h2 className="h-section reveal d1" style={{ marginTop: 16 }}>
-              Bộ giải pháp chuyên sâu
+              Giải pháp chuyên dùng
               <br />
-              cho ngành giáo dục.
+              mảng giáo dục.
             </h2>
-            <p className="lead reveal d1" style={{ margin: "14px 0 4px" }}>
-              Bên cạnh nền tảng ERP lõi, ASync EDU+ bổ sung các phân hệ riêng cho trung tâm đào
-              tạo — từ học viên, học phí đến trải nghiệm học tập.
-            </p>
             <div className="diff-tabs" role="tablist" aria-label="Điểm khác biệt">
               {eduTabs.map((t, i) => (
                 <button

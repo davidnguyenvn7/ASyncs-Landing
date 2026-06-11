@@ -11,8 +11,7 @@ export function Industries() {
           <span className="eyebrow center reveal">Lĩnh vực</span>
           <h2 className="h-section reveal d1">Linh hoạt cho mọi lĩnh vực.</h2>
           <p className="lead reveal d2">
-            Cùng một nền tảng, cấu hình riêng cho từng ngành — từ thương mại, dịch vụ, sản xuất đến
-            giáo dục và y tế.
+            Từ thương mại, dịch vụ, sản xuất đến giáo dục và y tế.
           </p>
         </div>
         <Tabs.Root defaultValue="ind-0">

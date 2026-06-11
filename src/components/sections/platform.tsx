@@ -56,7 +56,7 @@ function SuiteBlock({ suite }: { suite: Suite }) {
         {suite.label}
       </span>
       <h3>{suite.title}</h3>
-      <p>{suite.desc}</p>
+      {suite.desc && <p>{suite.desc}</p>}
       <ul className="suite-bullets">
         {suite.bullets.map((b, i) => (
           <li key={i}>

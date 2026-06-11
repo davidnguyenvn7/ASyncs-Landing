@@ -8,9 +8,13 @@ export function Cta() {
           <div className="glow glow-e" />
           <div className="cta-banner-inner">
             <span className="pill pill-lime">Sẵn sàng đồng bộ</span>
-            <h2>Tối ưu vận hành, tăng trưởng đột phá.</h2>
+            <h2>
+              Tối ưu vận hành,{" "}
+              <br />
+              tăng trưởng đột phá.
+            </h2>
             <p className="lead">
-              Khám phá cách ASync giúp bạn chuẩn hoá quy trình, giảm công việc thủ công và kiểm
+              Khám phá cách ASyncs giúp bạn chuẩn hoá quy trình, giảm công việc thủ công và kiểm
               soát mọi hoạt động trên một nền tảng duy nhất.
             </p>
             <div className="hero-actions">

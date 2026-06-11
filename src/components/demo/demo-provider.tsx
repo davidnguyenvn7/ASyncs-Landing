@@ -29,9 +29,9 @@ export function DemoProvider({ children }: { children: React.ReactNode }) {
         <DialogContent aria-describedby="demo-desc">
           <DialogHeader>
             <span className="pill pill-lime">Đặt lịch demo</span>
-            <DialogTitle>Trải nghiệm ASync cùng chuyên gia</DialogTitle>
+            <DialogTitle>Trải nghiệm ASyncs cùng chuyên gia</DialogTitle>
             <DialogDescription id="demo-desc">
-              Để lại thông tin, đội ngũ ASync sẽ liên hệ tư vấn và demo nền tảng phù hợp với
+              Để lại thông tin, đội ngũ ASyncs sẽ liên hệ tư vấn và demo nền tảng phù hợp với
               doanh nghiệp của bạn.
             </DialogDescription>
           </DialogHeader>
