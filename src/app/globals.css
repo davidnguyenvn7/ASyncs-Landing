@@ -429,6 +429,13 @@ h3 {
     backdrop-filter: blur(20px);
     padding: 16px var(--pad) 26px;
     border-bottom: 1px solid var(--line-d);
+    /* Cap the panel to the visible viewport and let it scroll internally —
+       otherwise an expanded mega menu (6 suite cards + footer) overflows far
+       below the fold with no way to reach the lower items. */
+    max-height: calc(100dvh - 74px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     transform: translateY(-12px);
     opacity: 0;
     pointer-events: none;
@@ -1150,6 +1157,9 @@ h3 {
   }
   .has-mega.open .mega {
     display: block;
+    /* Override the desktop centering transform (higher specificity than the
+       `.mega` reset above) so the panel isn't shifted off the left edge. */
+    transform: none;
   }
   .mega-grid {
     grid-template-columns: 1fr;
