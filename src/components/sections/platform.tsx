@@ -92,17 +92,32 @@ function SuiteBlock({ suite }: { suite: Suite }) {
   );
 }
 
+const coreValues = [
+  { title: "Tập trung", desc: "Một nguồn dữ liệu duy nhất." },
+  { title: "Tự động", desc: "Giảm việc thủ công, hạn chế sai sót." },
+  { title: "Mở rộng", desc: "Quy mô lớn, hệ thống quản lý chặt chẽ, đồng bộ." },
+];
+
 export function Platform() {
   return (
     <section className="section dark" id="platform" data-screen-label="Nền tảng">
       <div className="wrap">
         <div className="platform-head">
-          <span className="eyebrow center reveal">Một nền tảng</span>
-          <h2 className="h-section reveal d1">Một nền tảng. Mọi giải pháp vận hành.</h2>
-          <p className="lead reveal d2">
-            Sáu bộ sản phẩm kết nối chặt chẽ, thay thế hàng chục công cụ rời rạc bằng một nguồn dữ
-            liệu duy nhất — triển khai linh hoạt cho mọi mô hình doanh nghiệp.
-          </p>
+          <span className="eyebrow center reveal">Giá trị cốt lõi</span>
+          <h2 className="h-section reveal d1">
+            <span className="grad">ASync</span> được xây dựng trên ba nguyên tắc xuyên suốt
+            <br />
+            áp dụng cho mọi sản phẩm, mọi mô hình doanh nghiệp
+          </h2>
+        </div>
+        <div className="values-grid reveal d2">
+          {coreValues.map((v) => (
+            <div className="value-card" key={v.title}>
+              <span className="value-dot" />
+              <h3>{v.title}</h3>
+              <p>{v.desc}</p>
+            </div>
+          ))}
         </div>
         {suites.map((s) => (
           <SuiteBlock suite={s} key={s.id} />

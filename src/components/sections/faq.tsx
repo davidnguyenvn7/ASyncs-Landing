@@ -9,7 +9,7 @@ export function Faq() {
       <div className="wrap">
         <div className="platform-head">
           <span className="eyebrow center reveal">Hỏi đáp</span>
-          <h2 className="h-section reveal d1">Những câu hỏi thường gặp.</h2>
+          <h2 className="h-section reveal d1">Những câu hỏi thường gặp</h2>
         </div>
         <Accordion.Root type="single" collapsible className="faq-wrap reveal d1">
           {faqs.map((f, i) => (

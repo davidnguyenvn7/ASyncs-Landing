@@ -47,7 +47,7 @@ export function Header() {
           <span className="brand-mark">
             A<b>Syncs</b>
           </span>
-          <span className="brand-tag">Asynchronized System</span>
+          <span className="brand-tag">A Synchronized System</span>
         </a>
 
         <nav className="nav-links" id="navLinks">

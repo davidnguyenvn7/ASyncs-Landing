@@ -54,7 +54,7 @@ export function Dashboard() {
       <div className="wrap">
         <div className="dash-head">
           <span className="eyebrow center reveal">ASyncs INSIGHT+ · Bảng điều hành</span>
-          <h2 className="h-section reveal d1">Điều hành doanh nghiệp bằng dữ liệu.</h2>
+          <h2 className="h-section reveal d1">Điều hành doanh nghiệp bằng dữ liệu</h2>
           <p className="lead reveal d2">
             Mọi chỉ số vận hành hội tụ trên một bảng điều hành —{" "}
             <br />

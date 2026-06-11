@@ -7,7 +7,9 @@ export function Testimonials() {
         <div className="platform-head">
           <span className="eyebrow center reveal">Khách hàng</span>
           <h2 className="h-section reveal d1">
-            Được tin dùng bởi doanh nghiệp nhiều lĩnh vực.
+            Được tin dùng bởi doanh nghiệp
+            <br />
+            nhiều lĩnh vực
           </h2>
         </div>
         <div className="tgrid">

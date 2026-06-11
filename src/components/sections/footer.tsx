@@ -9,6 +9,9 @@ export function Footer() {
             <span className="brand-mark" style={{ fontSize: 24 }}>
               A<b style={{ color: "var(--lime)" }}>Syncs</b>
             </span>
+            <p className="f-tag">
+              From chaos to <span className="grad">synchronized systems</span>
+            </p>
           </div>
           {footerColumns.map((col) => (
             <div className="f-col" key={col.title}>
@@ -23,7 +26,7 @@ export function Footer() {
         </div>
         <div className="footer-bot">
           <span>© 2026 ASyncs. All rights reserved.</span>
-          <span className="font-mono">ASYNCHRONIZED&nbsp;SYSTEM</span>
+          <span className="font-mono">A&nbsp;SYNCHRONIZED&nbsp;SYSTEM</span>
         </div>
       </div>
     </footer>

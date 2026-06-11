@@ -11,7 +11,7 @@ export function Cta() {
             <h2>
               Tối ưu vận hành,{" "}
               <br />
-              tăng trưởng đột phá.
+              tăng trưởng đột phá
             </h2>
             <p className="lead">
               Khám phá cách ASyncs giúp bạn chuẩn hoá quy trình, giảm công việc thủ công và kiểm

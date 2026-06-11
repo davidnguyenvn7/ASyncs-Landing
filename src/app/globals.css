@@ -508,7 +508,7 @@ h3 {
 .hero h1 {
   max-width: 16ch;
 }
-.hero h1 .grad {
+.grad {
   background: linear-gradient(120deg, var(--lime-bright), var(--lime) 55%, var(--lime-deep));
   -webkit-background-clip: text;
   background-clip: text;
@@ -1238,6 +1238,43 @@ h3 {
 }
 .platform-head .lead {
   text-align: center;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 8px;
+}
+@media (max-width: 900px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.value-card {
+  padding: 30px 26px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line-d);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+}
+.value-card .value-dot {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 4px rgba(132, 204, 22, 0.14);
+  margin-bottom: 26px;
+}
+.value-card h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+.value-card p {
+  font-size: 14.5px;
+  color: var(--paper-soft);
+  line-height: 1.5;
 }
 .suite {
   display: grid;

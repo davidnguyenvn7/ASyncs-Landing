@@ -6,7 +6,7 @@ export function Journey() {
       <div className="wrap">
         <div className="platform-head">
           <span className="eyebrow center reveal">Hành trình chuyển đổi</span>
-          <h2 className="h-section reveal d1">Đồng hành từ rời rạc đến đồng bộ.</h2>
+          <h2 className="h-section reveal d1">Đồng hành từ rời rạc đến đồng bộ</h2>
         </div>
         <div className="journey-grid">
           {journey.map((j, i) => (

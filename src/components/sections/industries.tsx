@@ -9,7 +9,7 @@ export function Industries() {
       <div className="wrap">
         <div className="ind-head">
           <span className="eyebrow center reveal">Lĩnh vực</span>
-          <h2 className="h-section reveal d1">Linh hoạt cho mọi lĩnh vực.</h2>
+          <h2 className="h-section reveal d1">Linh hoạt cho mọi lĩnh vực</h2>
           <p className="lead reveal d2">
             Từ thương mại, dịch vụ, sản xuất đến giáo dục và y tế.
           </p>
