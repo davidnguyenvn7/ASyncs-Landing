@@ -1,0 +1,8 @@
+# Caddy reverse proxy cho ASyncs Landing.
+# Copy lên VPS: sudo cp Caddyfile /etc/caddy/Caddyfile && sudo systemctl restart caddy
+# Caddy tự xin & gia hạn SSL Let's Encrypt cho các domain bên dưới.
+
+asyncs.tech, www.asyncs.tech {
+    encode gzip zstd
+    reverse_proxy 127.0.0.1:3000
+}
