@@ -114,6 +114,9 @@ export function Header() {
           <a href="#testimonials" onClick={closeAll}>
             Khách hàng
           </a>
+          <a href="#projects" onClick={closeAll}>
+            Dự án
+          </a>
           <a href="#faq" onClick={closeAll}>
             Tài nguyên
           </a>

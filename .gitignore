@@ -35,3 +35,6 @@ _styles.css
 # tooling artifacts
 .playwright-mcp/
 full-page.jpeg
+
+# locally uploaded project thumbnails (prod uses a Docker volume)
+/uploads/

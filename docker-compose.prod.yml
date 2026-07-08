@@ -36,6 +36,10 @@ services:
       # joins halo-prod_default, a bare "postgres" would clash with HaloERP's
       # own postgres alias on that network.
       DATABASE_URL: postgres://${POSTGRES_USER:-async}:${POSTGRES_PASSWORD}@async_postgres_prod:5432/${POSTGRES_DB:-async}
+      # Consumed only by the one-off `npm run create-admin` (empty otherwise).
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      ADMIN_NAME: ${ADMIN_NAME:-}
     depends_on:
       postgres:
         condition: service_healthy
@@ -62,6 +66,9 @@ services:
     networks:
       - default
       - halo_edge
+    volumes:
+      # Uploaded project thumbnails — persisted outside the container.
+      - async_uploads_prod:/app/uploads
 
 networks:
   # web <-> postgres <-> migrate live on the project's own default network.
@@ -74,3 +81,4 @@ networks:
 
 volumes:
   async_pgdata_prod:
+  async_uploads_prod:

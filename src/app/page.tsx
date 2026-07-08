@@ -9,6 +9,7 @@ import { Industries } from "@/components/sections/industries";
 import { Dashboard } from "@/components/sections/dashboard";
 import { Journey } from "@/components/sections/journey";
 import { Testimonials } from "@/components/sections/testimonials";
+import { Projects } from "@/components/sections/projects";
 import { Impact } from "@/components/sections/impact";
 import { Faq } from "@/components/sections/faq";
 import { Cta } from "@/components/sections/cta";
@@ -28,6 +29,7 @@ export default function Home() {
         <Dashboard />
         <Journey />
         <Testimonials />
+        <Projects />
         <Impact />
         <Faq />
         <Cta />

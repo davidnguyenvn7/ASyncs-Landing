@@ -43,9 +43,15 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
+# Uploaded thumbnails live here; docker-compose mounts a named volume over it.
+ENV UPLOAD_DIR=/app/uploads
 
 RUN addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 nextjs
+
+# Create the uploads dir owned by the runtime user. A fresh Docker named volume
+# inherits this ownership on first mount, so the app (uid 1001) can write to it.
+RUN mkdir -p /app/uploads && chown nextjs:nodejs /app/uploads
 
 # Standalone output already contains a pruned node_modules and server.js.
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
