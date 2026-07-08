@@ -32,7 +32,10 @@ services:
       context: .
       target: migrator
     environment:
-      DATABASE_URL: postgres://${POSTGRES_USER:-async}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-async}
+      # Use the container name (not the "postgres" service alias): once "web"
+      # joins halo-prod_default, a bare "postgres" would clash with HaloERP's
+      # own postgres alias on that network.
+      DATABASE_URL: postgres://${POSTGRES_USER:-async}:${POSTGRES_PASSWORD}@async_postgres_prod:5432/${POSTGRES_DB:-async}
     depends_on:
       postgres:
         condition: service_healthy
@@ -45,14 +48,29 @@ services:
     container_name: async_web_prod
     restart: unless-stopped
     environment:
-      DATABASE_URL: postgres://${POSTGRES_USER:-async}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-async}
+      # Use the container name (not the "postgres" service alias): once "web"
+      # joins halo-prod_default, a bare "postgres" would clash with HaloERP's
+      # own postgres alias on that network.
+      DATABASE_URL: postgres://${POSTGRES_USER:-async}:${POSTGRES_PASSWORD}@async_postgres_prod:5432/${POSTGRES_DB:-async}
       NODE_ENV: production
     depends_on:
       migrate:
         condition: service_completed_successfully
-    ports:
-      # Bind to localhost only; put Nginx/Caddy in front for TLS + domain.
-      - "127.0.0.1:3000:3000"
+    # No host port. The existing HaloERP nginx edge already owns 80/443 (and
+    # 127.0.0.1:3000), so we don't publish anything. Instead "web" joins the
+    # HaloERP edge network and that nginx proxies asyncs.tech -> async_web_prod:3000.
+    networks:
+      - default
+      - halo_edge
+
+networks:
+  # web <-> postgres <-> migrate live on the project's own default network.
+  default:
+  # HaloERP's compose network — its nginx edge lives here and reaches us by
+  # container name. Must already exist (it does: `halo-prod_default`).
+  halo_edge:
+    external: true
+    name: halo-prod_default
 
 volumes:
   async_pgdata_prod:
